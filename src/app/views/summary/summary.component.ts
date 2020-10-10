@@ -5,7 +5,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.scss']
+  styleUrls: ['./summary.component.scss'],
 })
 export class SummaryComponent {
   /** Based on the screen size, switch from standard to one column per row */
@@ -13,18 +13,18 @@ export class SummaryComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Get Started', cols: 1, rows: 1 },
+          { title: 'Latest Match', cols: 1, rows: 1 },
+          { title: 'Top Players', cols: 1, rows: 1 },
+          { title: 'Latest Tournament', cols: 1, rows: 1 },
         ];
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Get Started', cols: 2, rows: 1 },
+        { title: 'Latest Match', cols: 1, rows: 1 },
+        { title: 'Top Players', cols: 1, rows: 2 },
+        { title: 'Latest Tournament', cols: 1, rows: 1 },
       ];
     })
   );

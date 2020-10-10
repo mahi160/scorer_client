@@ -15,12 +15,14 @@ import { SummaryComponent } from './views/summary/summary.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { PageNotFindComponent } from './views/page-not-find/page-not-find.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    SummaryComponent
+    SummaryComponent,
+    PageNotFindComponent
   ],
   imports: [
     BrowserModule,
