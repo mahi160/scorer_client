@@ -24,8 +24,25 @@
             </mat-menu> -->
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+        <!-- Getting Started -->
+        <mat-card-content class="dashboard-card-content" *ngIf="i === 0">
+          <button mat-stroked-button color="primary">Start a match</button>
+          <button mat-stroked-button color="accent">Start a tour</button>
+        </mat-card-content>
+
+        <!-- Latest Mathc -->
+        <mat-card-content class="dashboard-card-content" *ngIf="i === 1">
+          <div>No match played.</div>
+        </mat-card-content>
+
+        <!-- Top Players -->
+        <mat-card-content class="dashboard-card-content" *ngIf="i === 2">
+          <div>No player has been added.</div>
+        </mat-card-content>
+
+        <!-- Latest Tour -->
+        <mat-card-content class="dashboard-card-content" *ngIf="i === 3">
+          <div>No tour recorded.</div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

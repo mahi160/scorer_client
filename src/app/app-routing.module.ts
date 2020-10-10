@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'summary', component: SummaryComponent },
-  { path: ' ', redirectTo: '/summary', pathMatch: 'full' },
+  { path: '', redirectTo: '/summary', pathMatch: 'full' },
   { path: '**', component: PageNotFindComponent },
 ];
 
