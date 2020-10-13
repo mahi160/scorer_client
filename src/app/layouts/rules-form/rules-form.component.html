@@ -1,0 +1,93 @@
+<form [formGroup]="rulesForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="rules-card">
+    <mat-card-header>
+      <mat-card-title>Match Rules</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- Team A -->
+      <mat-form-field appearance="outline">
+        <mat-label>Team A</mat-label>
+        <input matInput placeholder="Name of team A" formControlName="teamA" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-icon matSuffix [hidden]="!rulesForm.valid"
+          >sentiment_very_dissatisfied</mat-icon
+        > -->
+        <mat-hint>min 3 chars</mat-hint>
+        <mat-error *ngIf="rulesForm.controls['teamA'].hasError('required')">
+          Team A is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Team B -->
+      <mat-form-field appearance="outline">
+        <mat-label>Team B</mat-label>
+        <input matInput placeholder="Name of team B" formControlName="teamB" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>min 3 chars</mat-hint>
+        <mat-error *ngIf="rulesForm.controls['teamB'].hasError('required')">
+          Team B is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Number of Players -->
+      <mat-form-field appearance="outline">
+        <mat-label>No. of Playes</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Number of players"
+          formControlName="numberOfPlayers"
+        />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Between 2-11</mat-hint>
+        <mat-error
+          *ngIf="rulesForm.controls['numberOfPlayers'].hasError('required')"
+        >
+          Number of players are <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Number of Overs -->
+      <mat-form-field appearance="outline">
+        <mat-label>No. of overs</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Number of overs"
+          formControlName="overs"
+        />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Between 01-50</mat-hint>
+        <mat-error *ngIf="rulesForm.controls['overs'].hasError('required')">
+          Number of overs are <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Other Options Value -->
+      <fieldset formArrayName="otherOptions">
+        <legend style="font-size: 18px; margin-bottom: 10px">
+          Other Options
+        </legend>
+        <div
+          *ngFor="let item of others.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <mat-checkbox formControlName="value">
+            {{ item.value.name }}
+          </mat-checkbox>
+        </div>
+      </fieldset>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        type="submit"
+        mat-stroked-button
+        color="primary"
+        [disabled]="!rulesForm.valid"
+        id="save-button"
+      >
+        Submit
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

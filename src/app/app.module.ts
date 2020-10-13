@@ -8,6 +8,10 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './layouts/nav-bar/nav-bar.component';
 import { SummaryComponent } from './views/summary/summary.component';
 import { PageNotFindComponent } from './views/page-not-find/page-not-find.component';
+import { RulesFormComponent } from './layouts/rules-form/rules-form.component';
+import { MatchesComponent } from './views/matches/matches.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,8 @@ import { PageNotFindComponent } from './views/page-not-find/page-not-find.compon
     NavBarComponent,
     SummaryComponent,
     PageNotFindComponent,
+    RulesFormComponent,
+    MatchesComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +28,7 @@ import { PageNotFindComponent } from './views/page-not-find/page-not-find.compon
     BrowserAnimationsModule,
     LayoutModule,
     MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

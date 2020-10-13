@@ -1,0 +1,35 @@
+// ? Parents
+.rules-card {
+  width: 500px;
+  margin: 20px auto;
+}
+
+// ? Input Elements
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.mat-form-field {
+  margin: 10px 20px 10px 20px;
+}
+
+// ? Checkboxes
+fieldset {
+  width: 260px;
+  height: 110px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  margin-left: 21px;
+  .mat-checkbox {
+    display: block;
+  }
+}
+
+// ? Buttons
+#save-button {
+  margin: 0px 0px 12px 29px;
+}
