@@ -12,6 +12,8 @@ import { RulesFormComponent } from './layouts/rules-form/rules-form.component';
 import { MatchesComponent } from './views/matches/matches.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { TypeFormComponent } from './layouts/type-form/type-form.component';
+import { PlayersFormComponent } from './layouts/players-form/players-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PageNotFindComponent,
     RulesFormComponent,
     MatchesComponent,
+    TypeFormComponent,
+    PlayersFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,9 @@
         </mat-card-header>
         <!-- Getting Started -->
         <mat-card-content class="dashboard-card-content" *ngIf="i === 0">
-          <button mat-stroked-button color="primary">Start a match</button>
+          <button mat-stroked-button color="primary" routerLink="/match">
+            Start a match
+          </button>
           <button mat-stroked-button color="accent">Start a tour</button>
         </mat-card-content>
 

@@ -1,0 +1,16 @@
+<mat-card class="type-form">
+  <mat-card-header>
+    <mat-card-title>Type of Match</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-radio-group>
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let item of matchType"
+        [value]="item.value"
+      >
+        {{ item.type }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card-content>
+</mat-card>
